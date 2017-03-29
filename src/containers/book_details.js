@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';  // HOW TO CONNECT APP STATE TO CONTAINER: need the connect from the library React-Redux
 
-
-
 class BookDetails extends Component {
 
   render() {
-    if (!this.props.book) return (
-      <div className="book-details col-md-6">Please select a book</div>
-    );
+    if (!this.props.book) {
+      return (
+        <div className="book-details col-md-6">Please select a book</div>
+      );
+    }
 
     return (
       <div className="book-details col-md-6">
@@ -24,6 +24,5 @@ function mapStateToProps(state) {    // HOW TO CONNECT APP STATE TO CONTAINER: m
     book: state.activeBook
   }
 }
-
 
 export default connect(mapStateToProps)(BookDetails);    // HOW TO CONNECT APP STATE TO CONTAINER: export this smart component, AKA container

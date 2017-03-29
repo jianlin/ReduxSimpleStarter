@@ -9,7 +9,7 @@ class BookList extends Component {
   renderBookList() {
     return this.props.books.map((book) => {    // HOW TO CONNECT APP STATE TO CONTAINER: How to use the state: as props
       return (
-        <li
+        <li className="list-group-item"
           key={book.title}
           onClick={() => this.props.selectBook(book)}
         >
@@ -21,7 +21,7 @@ class BookList extends Component {
 
   render() {
     return (
-      <ul className="book-list col-md-6">
+      <ul className="book-list col-md-6 list-group">
       {this.renderBookList()}
       </ul>
     );
