@@ -6,9 +6,9 @@ import BookDetails from "../containers/book_details.js";
 export default class App extends Component {
   render() {
     return (
-      <div>React simple starter
-      <BookList />
-      <BookDetails />
+      <div>
+        <BookList />
+        <BookDetails />
       </div>
     );
   }

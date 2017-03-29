@@ -1,4 +1,4 @@
 
-
+.book-list { margin-top: 20px; }
 .book-details { padding: 20px; border-radius: 12px; background: #ffc; }
 .book-image { display: block; max-height: 200px; max-width: 200px; }
