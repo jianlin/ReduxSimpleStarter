@@ -13,7 +13,7 @@ class BookDetails extends Component {
     return (
       <div className="book-details col-md-6">
       <h2>{this.props.activeBook.title}, by {this.props.activeBook.author}, {this.props.activeBook.numPages} pages</h2>
-      <img className="book-image" src={"/images/" + this.props.activeBook.imageName} />
+      <img className="book-image" src={"images/" + this.props.activeBook.imageName} />
       </div>
     );
   }
