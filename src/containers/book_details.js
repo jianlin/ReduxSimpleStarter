@@ -7,12 +7,13 @@ class BookDetails extends Component {
 
   render() {
     if (!this.props.activeBook) return (
-      <div>Please select a book</div>
+      <div className="book-details">Please select a book</div>
     );
 
     return (
-      <div>
-      {this.props.activeBook.title}, by {this.props.activeBook.author}, {this.props.activeBook.numPages} pages
+      <div className="book-details">
+      <h2>{this.props.activeBook.title}, by {this.props.activeBook.author}, {this.props.activeBook.numPages} pages</h2>
+      <img className="book-image" src={"/images/" + this.props.activeBook.imageName} />
       </div>
     );
   }
