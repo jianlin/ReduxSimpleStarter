@@ -6,14 +6,14 @@ import { connect } from 'react-redux';  // HOW TO CONNECT APP STATE TO CONTAINER
 class BookDetails extends Component {
 
   render() {
-    if (!this.props.activeBook) return (
+    if (!this.props.book) return (
       <div className="book-details col-md-6">Please select a book</div>
     );
 
     return (
       <div className="book-details col-md-6">
-      <h2>{this.props.activeBook.title}, by {this.props.activeBook.author}, {this.props.activeBook.numPages} pages</h2>
-      <img className="book-image" src={"images/" + this.props.activeBook.imageName} />
+      <h2>{this.props.book.title}, by {this.props.book.author}, {this.props.book.numPages} pages</h2>
+      <img className="book-image" src={"images/" + this.props.book.imageName} />
       </div>
     );
   }
@@ -21,7 +21,7 @@ class BookDetails extends Component {
 
 function mapStateToProps(state) {    // HOW TO CONNECT APP STATE TO CONTAINER: map the app level state to props
   return {
-    activeBook: state.activeBook
+    book: state.activeBook
   }
 }
 
