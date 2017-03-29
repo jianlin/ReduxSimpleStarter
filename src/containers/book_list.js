@@ -13,7 +13,7 @@ class BookList extends Component {
           key={book.title}
           onClick={() => { this.props.selectBook(book) }}
         >
-          {book.title}, {book.author}, {book.numPages} pages
+          {book.title}, {book.author}
         </li>
       )
     });
