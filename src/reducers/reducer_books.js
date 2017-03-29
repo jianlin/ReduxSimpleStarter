@@ -1,5 +1,6 @@
 
 export default function() {
+  console.log("In Books Reducer", arguments)
   return [
     {title: "The Ruby Programming Language", numPages: 123, author: "David Flanagan"},
     {title: "Da Vinci Code", numPages: 456, author: "Dan Brown"},
